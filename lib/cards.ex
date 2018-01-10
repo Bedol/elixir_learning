@@ -48,4 +48,10 @@ defmodule Cards do
       {:error, _reason} -> "Can't load this file"
     end
   end
+
+  def create_hand(hand_size) do
+    create_deck()
+      |> shuffle
+      |> deal(hand_size)
+  end
 end
